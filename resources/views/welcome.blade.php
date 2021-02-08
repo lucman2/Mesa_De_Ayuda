@@ -22,7 +22,7 @@
                     <img  class="img-fluid" src="{{asset('img/fondo2_inicio.jpg')}}" alt="Fondo inicial">
                 </div>
                 <div class="col-sm-2 mx-auto">
-                    <img  class="img-fluid" src="{{asset('img/logo_mesadeayuda.jpg')}}" alt="Fondo inicial">
+                    <img  class="img-fluid" src="{{asset('img/LOGO.jpg')}}" alt="Fondo inicial">
                     @if (Route::has('login'))
 
                             <a href="{{ route('login') }}" class="btn btn-md mb-2">INICIAR SESION</a>

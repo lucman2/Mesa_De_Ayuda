@@ -52,6 +52,7 @@ class VigilarTiempo extends Command
             foreach($solicitudes as $solicitud){
                 $diff = $ahora->diffInDays($solicitud->created_at);
                 if($diff > 3){
+                //Destinatario del correo
                 Mail::to('lrodrigueze@unicartagena.edu.co')->send($mail);
 
                 }
