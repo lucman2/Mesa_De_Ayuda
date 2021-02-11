@@ -15,7 +15,7 @@ class CoordinadorController extends Controller
     public function index()
     {
         $solicitudes = Solicitud::all();
-        
+        //Cargando las solicitudes en la interfaz de coordinador   
         return view('panelCoordinador', ['solicitudes' => $solicitudes]);
     }
 

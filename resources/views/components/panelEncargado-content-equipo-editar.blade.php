@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-        <a href="{{ route('equipo.index') }}">Volver</a>
+        <a href="{{ route('equipo.index') }}" class="btn btn-sm" style="background-color: black; border-color:black; color:white">Volver</a>
         <br>
 
         <h2>ACTUALIZAR</h2>

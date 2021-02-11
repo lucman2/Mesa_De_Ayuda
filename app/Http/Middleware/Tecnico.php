@@ -17,8 +17,14 @@ class Tecnico
      */
     public function handle(Request $request, Closure $next)
     {
+        //Estandar de validacion de rol, si no es uno de los roles permitidos manda al usuario a la pagina de errores
+        /* Las claves de rol son las siguientes
+            1 - Tecnico
+            2 - Coordinador
+            3 - Encargado
+            0 - Superusuario
+        */
         $rol = Auth::user()->rol;
-        
         if($rol != 1 && $rol != 0){
             return redirect()->route('errorPermisos');
         } else { 

@@ -1,6 +1,7 @@
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="btn btn-md btn-primary mb-2" style="background-color:black; border-color:black" aria-current="page" href="{{ route('coordinador.index') }}">Solicitudes</a>
+    <a class="btn btn-md btn-primary mb-2" style="background-color:black; border-color:black" aria-current="page" href="{{ route('encargado.index') }}">Solicitudes</a>
+  </li>
   <li class="nav-item">
   <form method="POST" action="{{ route('logout') }}">
                             @csrf

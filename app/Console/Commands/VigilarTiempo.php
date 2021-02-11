@@ -43,12 +43,11 @@ class VigilarTiempo extends Command
     {
         
         
-        
         $solicitudes = Solicitud::all();
 
             $ahora = Carbon::now();
             $mail = new SendMail(" ", "lrodriguezetallereps@gmail.com");
-
+            //Verifica la diferencia en dias entre la fecha actual y la fecha de creacion de la solicitud
             foreach($solicitudes as $solicitud){
                 $diff = $ahora->diffInDays($solicitud->created_at);
                 if($diff > 3){

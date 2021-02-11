@@ -23,7 +23,7 @@ use App\Http\Controllers\CoordinadorController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 /*
 Route::get('/dashboard', function () {

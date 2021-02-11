@@ -17,6 +17,7 @@ class EncargadoController extends Controller
     {
 
         $solicitud = Solicitud::paginate(10);
+        //Cargando y paginando las solicitudes para interfaz de encargado
         return view('panelEncargado', ['solicitudes' => $solicitud]);
         
     }
@@ -61,6 +62,7 @@ class EncargadoController extends Controller
      */
     public function edit(Request $request)
     {
+        //La solicitud se carga en los campos de la interfaz
         return view('panelEncargado-editar', ['solicitud' => $request]);
     }
 
@@ -73,13 +75,16 @@ class EncargadoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //A través de Eloquent encuentra la solicitud con la id pasada
         $solicitud = Solicitud::find($id);
 
+        //Actualizar los campos de la solicitud editada
         $solicitud->asunto = $request->asunto;
         $solicitud->motivo = $request->motivo;
         $solicitud->trabajo = $request->trabajo;
         $solicitud->equipo = $request->equipo;
         
+        //Metodo para guardar los cambios
         $solicitud->save();
 
         return back();
